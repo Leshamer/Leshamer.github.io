@@ -63,7 +63,6 @@ body{
         }
 
     }
-
     .lesson_3{
 
         .block-For-Mouse{
@@ -83,6 +82,22 @@ body{
             background-color: darkolivegreen;
         }
 
+    }
+    .lesson_5{
+        .block-For-Mouse-3{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 30px;
+            height: 300px;
+            width: 300px;
+            background-color: darkolivegreen;
+            div{
+                line-height: 100px;
+                text-align: center;
+                display: block;
+                width: 100px;
+            }
+        }
     }
 }
 

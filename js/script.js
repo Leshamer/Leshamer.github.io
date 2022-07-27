@@ -6,16 +6,20 @@ const vis = document.querySelector('.vision');
 const hev = document.querySelectorAll('.buttons_heaven>button');
 const blockForMouse = document.querySelector('.block-For-Mouse');
 const blockForMouse2 = document.querySelector('.block-For-Mouse-2');
-
 const textItem = document.querySelector('.textLes');
 const textItemLimit = textItem.getAttribute('maxlength');
 const textCounter = document.querySelector('.textarea_counter span');
 textCounter.innerHTML = textItemLimit;
+const blockForMouse3 = document.querySelector('.block-For-Mouse-3');
+
+
+
 
 textItem.addEventListener("keyup", textSetCounter);
 textItem.addEventListener("keydown", function(event){
     if(event.repeat) textSetCounter();
 });
+
 
 
 
@@ -60,7 +64,17 @@ blockForMouse2.addEventListener("mouseout", function(event){
 
 
 
+blockForMouse3.addEventListener("mouseover", function(event){
+let target = event.target.closest('div');
+if (!target) return;
+target.style.cssText = `background-color: red;`;
+});
 
+blockForMouse3.addEventListener("mouseout", function(event){
+let target = event.target.closest('div');
+if (!target) return;
+target.style.cssText = ``;
+});
 
 
 
